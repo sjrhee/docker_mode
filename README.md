@@ -16,7 +16,7 @@
 ## 수행된 주요 명령
 (순서대로 실행한 명령들입니다)
 
-1. 필수 도구/리포지토리 준비
+1. 필수 도구/리포s토리 준비
 ```bash
 sudo dnf -y install dnf-plugins-core yum-utils
 sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -67,5 +67,14 @@ sudo docker run --rm hello-world
 - 만약 Podman을 유지하고 싶다면 `podman-docker` 패키지를 이용해 `docker` 명령 호환 계층을 사용하는 방법도 있습니다(하지만 Docker 데몬과는 다릅니다).
 
 ---
+
+## CRDP 도커 생성
+```bash
+docker pull thalesciphertrust/ciphertrust-restful-data-protection:1.2.1
+
+docker run -d -e KEY_MANAGER_HOST=192.168.0.230 -e REGISTRATION_TOKEN=dWdYBprDpuOGSDwrViA4I68mi4DA30CQbrApf5ZglrpxRPI2FokI5jNE9IbyLCzZ --restart unless-stopped -p 32082:8090 -p 32080:8080 -e SERVER_MODE=no-tls thalesciphertrust/ciphertrust-restful-data-protection
+
+```
+
 
 문서에서 수정하거나 추가할 내용이 있으면 알려주세요. 특정 사용자를 `docker` 그룹에 추가해 드릴까요? (사용자명 제공)
