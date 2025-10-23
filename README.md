@@ -75,6 +75,3 @@ docker pull thalesciphertrust/ciphertrust-restful-data-protection:1.2.1
 docker run -d -e KEY_MANAGER_HOST=192.168.0.230 -e REGISTRATION_TOKEN=dWdYBprDpuOGSDwrViA4I68mi4DA30CQbrApf5ZglrpxRPI2FokI5jNE9IbyLCzZ --restart unless-stopped -p 32082:8090 -p 32080:8080 -e SERVER_MODE=no-tls thalesciphertrust/ciphertrust-restful-data-protection
 
 ```
-
-
-문서에서 수정하거나 추가할 내용이 있으면 알려주세요. 특정 사용자를 `docker` 그룹에 추가해 드릴까요? (사용자명 제공)
